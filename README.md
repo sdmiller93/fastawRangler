@@ -57,6 +57,7 @@ Usage:
 ## Notes
 
 - This script requires the package "seqinr". 
+- If the IDs in your input list do not exactly match headers in your input FASTA file, please use the wildcard option and be sure your IDs include the wildcard character (*).
 - Input lists don't require a header but will accept lists with headers. 
   (list is read in with header = FALSE so that lists with headers will return no matches)
 - This script also outputs an intermediate FASTA file with all spaces in the headers removed. It is output in the working directory. 
