@@ -272,7 +272,7 @@ if (keepseqs == TRUE){
 						
 	newfasta <- fasta[!(names(fasta) %in% names_final)]
 
-	write.fasta(as.list(newfasta), full_ids, outfile, open = "w", nbchar = 1000000)
+	write.fasta(as.list(newfasta), names_final, outfile, open = "w", nbchar = 1000000)
 		
 }
 
