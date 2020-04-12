@@ -67,3 +67,25 @@ Usage:
   (list is read in with header = FALSE so that lists with headers will return no matches)
 - This script also outputs an intermediate FASTA file with all spaces in the headers removed. It is output in the working directory. 
 - Sample datasets can be located in the "Example/" directory. Two input lists: lista = no wildcards, listb = wildcards, and the sample FASTA file.
+
+## Troubleshooting
+
+```
+./fastawrangler.R ./testfasta.fasta ./listb.txt FALSE FALSE ./tmp2.fasta
+This script takes an input fasta file and a list of ids with or without wildcards and extracts or removes those sequences from the fasta file. For more information type '-h'.
+first arg ./testfasta.fasta
+second arg ./listb.txt
+third arg FALSE
+fourth arg FALSE
+fifth arg ./tmp2.fasta
+Starting work: wildcard
+[1] "outputting fasta file with spaces in headers removed to working directory"
+TRINITY_DN25698_c0_g*
+TRINITY_DN29861_c0_g*
+Starting work: extracting or removing
+Error in paste(">", name, sep = "") : object 'full_ids' not found
+Calls: write.fasta ... lapply -> FUN -> write.oneseq -> writeLines -> paste
+Execution halted
+```
+
+This error is a result of using an input list with wildcards present but setting the fourth flag to FALSE thereby stating that wildcards are not present. A similar error will occur if you input a list without wildcards but the fourth flag is set to TRUE. 
