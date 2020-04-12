@@ -1,13 +1,13 @@
-## fastawRangler
+# fastawRangler
 A tool to extract or remove sequences within a FASTA file based on an input list of sequence IDs.
 
 This script is executable from the bash command line.
 
-# Download the script via:
+## Download the script via:
 ```
 curl -o https://raw.githubusercontent.com/sdmiller93/fastawRangler/master/fastawrangler.R
 ```
-# Help Message
+## Help Message
 via 
 
 ```
@@ -22,7 +22,7 @@ Arguments:
 5.Output path and name for your fasta file. Default = out.fasta
 ```
 
-# Example - without wildcards
+## Example - without wildcards
 input list:
 ```
 AAP30714.1
@@ -38,7 +38,7 @@ Usage:
 ./fastawrangler.R /path/to/input.fasta /path/to/sequenceidlist.txt FALSE FALSE /path/to/out.fasta
 ```
 
-# Example - with wildcards 
+## Example - with wildcards 
 
 input list:
 ```
@@ -54,4 +54,9 @@ Usage:
 # to output a fasta with the sequences listed in the input list removed from the input fasta file, no wildcards present
 ./fastawrangler.R /path/to/input.fasta /path/to/sequenceidlist.txt FALSE TRUE /path/to/out.fasta
 ```
-# Notes
+## Notes
+
+- This script requires the package "seqinr". 
+- Input lists don't require a header but will accept lists with headers. 
+  (list is read in with header = FALSE so that lists with headers will return no matches)
+- This script also outputs an intermediate FASTA file with all spaces in the headers removed. It is output in the working directory. 
