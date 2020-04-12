@@ -60,3 +60,4 @@ Usage:
 - Input lists don't require a header but will accept lists with headers. 
   (list is read in with header = FALSE so that lists with headers will return no matches)
 - This script also outputs an intermediate FASTA file with all spaces in the headers removed. It is output in the working directory. 
+- Sample datasets can be located in the example/ directory. Two input lists: lista = no wildcards, listb = wildcards, and the sample FASTA file.
