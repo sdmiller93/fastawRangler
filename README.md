@@ -3,6 +3,11 @@ A tool to extract or remove sequences within a FASTA file based on an input list
 
 This script is executable from the bash command line.
 
+Given a FASTA file and input list of sequence IDs, this tool can do one of two things:
+1. Output a FASTA file with the sequences of the input IDs.
+-or-
+2. Output a FASTA file with the sequences of the input IDs removed from the input FASTA file.
+
 ## Download the script via:
 ```
 curl -o https://raw.githubusercontent.com/sdmiller93/fastawRangler/master/fastawrangler.R
