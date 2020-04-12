@@ -121,6 +121,8 @@ if (is.na(args[3L])){
 	keepseqs = TRUE	
 	
 } else {
+	# make it FALSE to remove seqs from FASTA file and accepting the 
+	# arg passed to it from the command line
 	keepseqs = args[3L]
 	
 }
@@ -261,7 +263,7 @@ fasta <- read.fasta(file = "fasta_nospaces.fasta", as.string = FALSE, forceDNAto
 
 if (keepseqs == TRUE){
 		
-	
+	# using seqinr create a fasta file that contains only the seqs with IDs stored in names_final
 	newfasta <- fasta[names(fasta) %in% names_final]
 
 	write.fasta(as.list(newfasta), names_final, outfile, open = "w", nbchar = 1000000)
@@ -269,7 +271,8 @@ if (keepseqs == TRUE){
 # if false, remove them from the fasta file 
 }else{
 	
-						
+	# using seqinr create a fasta file where the seqs are those in the input fasta file 
+	# and not listed in the input ID list stored in names_final
 	newfasta <- fasta[!(names(fasta) %in% names_final)]
 
 	write.fasta(as.list(newfasta), names_final, outfile, open = "w", nbchar = 1000000)
