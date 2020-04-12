@@ -68,7 +68,8 @@ Usage:
 - This script also outputs an intermediate FASTA file with all spaces in the headers removed. It is output in the working directory. 
 - Sample datasets can be located in the "Example/" directory. Two input lists: lista = no wildcards, listb = wildcards, and the sample FASTA file.
 
-## Troubleshooting
+## Troubleshooting 
+In the future, I will try to incorporate these checks in the code to print a help message if encountered.
 
 ```
 ./fastawrangler.R ./testfasta.fasta ./listb.txt FALSE FALSE ./tmp2.fasta
