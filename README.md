@@ -16,7 +16,7 @@ curl -o https://raw.githubusercontent.com/sdmiller93/fastawRangler/master/fastaw
 via 
 
 ```
-./ fastawrangler.R -h
+./fastawrangler.R -h
 ```
 ```
 Arguments:
