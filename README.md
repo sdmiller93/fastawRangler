@@ -11,6 +11,7 @@ Given a FASTA file and input list of sequence IDs, this tool can do one of two t
 ## Download the script via:
 ```
 git clone https://github.com/sdmiller93/fastawRangler
+cd fastawRangler
 chmod +x fastawRangler.R # need to fix this so it's automatically executable
 ```
 
