@@ -10,8 +10,12 @@ Given a FASTA file and input list of sequence IDs, this tool can do one of two t
 
 ## Download the script via:
 ```
-curl -o https://raw.githubusercontent.com/sdmiller93/fastawRangler/master/fastawrangler.R
+git clone https://github.com/sdmiller93/fastawRangler
+chmod +x fastawRangler.R # need to fix this so it's automatically executable
 ```
+
+
+
 ## Help Message
 via 
 
