@@ -14,7 +14,11 @@ git clone https://github.com/sdmiller93/fastawRangler
 chmod +x fastawRangler.R # need to fix this so it's automatically executable
 ```
 
+Execute via:
 
+```
+./fastawRangler /pathto/fastafile.fasta /pathto/id_list.txt
+```
 
 ## Help Message
 via 
