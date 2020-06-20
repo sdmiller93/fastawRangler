@@ -258,6 +258,8 @@ if (error_checking){message(paste(names_final[1], names_final[2], sep="\n"))}
 # if true, use seqinr to extract the sequences by id easily
 if (error_checking){ message("Starting work: extracting or removing")}
 
+# load in fasta file via seqinr
+fasta <- read.fasta(file = "fasta_nospaces.fasta", as.string = FALSE, forceDNAtolower = FALSE)
 
 if (keepseqs == TRUE){
 		
@@ -271,20 +273,10 @@ if (keepseqs == TRUE){
 
 # if false, remove them from the fasta file 
 }else{
-	# initiate list of positions
-	position_list <- c()
-	
-	for (i in 1:length(names_final)){
-		id <- names_final[i]
-		position <- grepl(id, fasta)
-		
-		
-	
-	
 	
 	# using seqinr create a fasta file where the seqs are those in the input fasta file 
 	# and not listed in the input ID list stored in names_final
-	# newfasta <- fasta[!(names(fasta) %in% names_final)]
+	newfasta <- fasta[!(names(fasta) %in% names_final)]
 
 	# write.fasta(as.list(newfasta), names_final, outfile, open = "w", nbchar = 1000000)
 		
